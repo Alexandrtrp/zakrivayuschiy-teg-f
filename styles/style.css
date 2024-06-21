@@ -6,42 +6,46 @@
   background-attachment: fixed;
   background-image: var(--background);
   background-size: cover;
-  font-variation-settings: 'wght' var(--normal-font-weight), 'wdth' 100, 'opsz' 0;
+  font-variation-settings: "wght" var(--slim-font-weight);
 }
 
 .header {
-  border: 2px solid var(--Themes-mainColor, #000);
-  background: var(--Themes-background, #fff);
+  font-family: var(--dop-font-family);
+  border: 2px solid var(--themes-mainColor, #000);
+  background: var(--themes-background, #fff);
   padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  
 }
 
-.section-wbr {
+.section-wrapper {
   margin: 0 auto;
-  inline-size: var(--content-width, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
+  inline-size: var(
+    --content-width,
+    clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem)
+  );
   min-inline-size: 375px;
   max-inline-size: 700px;
 }
 
-.title-wbr {
+.title-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .header-title {
-  color: var(--Themes-mainColor, #000);
-  font-family: "Press Start 2P", sans-serif;
-  font-size: clamp(2.722rem, 2.409rem + 1.502vw, 3.611rem);
+  color: var(--themes-mainColor, #000);
+  font-family: var(--dop-font-family);
+  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
   font-weight: 400;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .header-title-dop {
-  color: var(--Themes-mainColor, #000);
-  font-family: "Press Start 2P", sans-serif;
-  font-size: clamp(0.778rem, 0.602rem + 0.845vw, 1.278rem);
+  color: var(--themes-mainColor, #000);
+  font-family: var(--dop-font-family);
+  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 20px;
@@ -57,7 +61,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 7px;
   justify-content: flex-start;
   position: relative;
 }
@@ -65,7 +69,7 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   opacity: 0.6;
-  color: var(--Themes-mainColor);
+  color: var(--themes-mainColor);
   position: absolute;
   left: 5px;
   animation: moveArrow 0.5s infinite ease-in-out alternate;
@@ -74,16 +78,15 @@
 .theme-menu__button:disabled {
   opacity: 0.6;
   pointer-events: none;
-  transition: opacity ease 0.3s;
 }
 
-.theme-menu__button:hover{
+.theme-menu__button:hover {
   opacity: 0.6;
 }
 
 .theme-menu__button {
-  color: var(--Themes-mainColor, #000);
-  font-family: "Press Start 2P", sans-serif;
+  color: var(--themes-mainColor, #000);
+  font-family: var(--dop-font-family), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   border: none;
@@ -93,20 +96,19 @@
 
 .theme-menu__button:hover {
   cursor: pointer;
-  animation: ease 0.3s;
 }
 
-.theme-menu__button:focus{
+.theme-menu__button:focus {
   border: none;
   outline: none;
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
   width: 0%;
   height: 2px;
-  background-color: var(--Themes-mainColor);
+  background-color: var(--themes-mainColor);
   opacity: 0;
   transition: width 0.3s ease, opacity 0.3s ease;
 }
@@ -117,7 +119,7 @@
 }
 
 .main {
-  margin-top: 107px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 54px;
@@ -126,18 +128,18 @@
 .card {
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--Themes-mainColor, #000);
+  border: 2px solid var(--themes-mainColor, #000);
 }
 
 .card-title {
-  color: var(--Themes-mainColor, #000);
-  font-family: "Inter";
+  color: var(--themes-mainColor, #000);
+  font-variation-settings: 'wght' var(--bold-font-weight);
   font-size: 18px;
   font-style: normal;
   font-weight: var(--title-weight);
   padding: 0 24px 5px 10px;
-  border-bottom: 2px solid var(--Themes-mainColor, #000);
-  background: var(--Themes-background, #fff);
+  border-bottom: 2px solid var(--themes-mainColor, #000);
+  background: var(--themes-background, #fff);
 }
 
 .card-img {
@@ -146,50 +148,50 @@
   inline-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
 }
 
-.filter-brightness{
+.filter-brightness {
   filter: brightness(150%);
 }
 
-.filter-contrast{
+.filter-contrast {
   filter: contrast(40%);
 }
 
-.filter-blur{
+.filter-blur {
   filter: blur(4.2rem);
 }
 
-.filter-opacity{
+.filter-opacity {
   filter: opacity(0.6);
 }
 
-.filter-grayscale{
+.filter-grayscale {
   filter: grayscale(0.4);
 }
 
-.filter-saturate{
+.filter-saturate {
   filter: saturate(180%);
 }
 
-.filter-hue-rotate{
+.filter-hue-rotate {
   filter: hue-rotate(-90deg);
 }
 
 .card-img-wbr {
   position: relative;
+  max-height: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   margin: 0;
 }
 
 .card-img-text {
   position: absolute;
-  color: var(--Themes-mainColor, #000);
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--Themes-background, #fff);
-  font-family: "Press Start 2P";
+  z-index: 1;
+  color: var(--themes-mainColor, #000);
+  text-shadow: 0.5px var(--themes-background, #fff);
+  font-family: var(--dop-font-family);
   font-size: 14px;
   font-weight: var(--text-weight);
   opacity: 0.5;
-  text-shadow: 0 0 1px var(--Themes-background, #fff);
-  mix-blend-mode: hard-light;
+  text-shadow: 0 0 1px var(--themes-background, #fff);
   mix-blend-mode: hard-light;
   inset-block-start: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
   inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
@@ -200,38 +202,37 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  border-top: 2px solid var(--Themes-mainColor, #000);
-  background: var(--Themes-background, #fff);
+  border-top: 2px solid var(--themes-mainColor, #000);
+  background: var(--themes-background, #fff);
 }
 
 .card-description-text {
-  color: var(--Themes-mainColor, #000);
-  font-family: "Inter";
+  color: var(--themes-mainColor, #000);
   font-size: 18px;
   font-style: normal;
   font-weight: var(--text-weight);
   line-height: 21px;
 }
 
-.card-button-wbr {
+.card-button-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
   align-self: flex-end;
   border: none;
   background: transparent;
 }
 
-.card-button-wbr:focus{
+.card-button-wrapper:focus {
   border: none;
   outline: none;
 }
 
-.card__like-button{
-  border: 2px solid var(--Themes-mainColor, #000);
-  background: var(--Themes-background, #fff);
-  color: var(--Themes-mainColor, #000);
-  padding: 9px 35px;
+.card__like-button {
+  min-inline-size: 130px;
+  min-block-size: 38px;
+  border: 2px solid var(--themes-mainColor, #000);
+  background: var(--difference-color, #fff);
+  color: var(--difference-color, #000);
   cursor: pointer;
   position: relative;
 }
@@ -241,53 +242,53 @@
 }
 
 .button:focus-visible {
-  border: 2px solid var(--Themes-mainColor, #000);
-  box-shadow: 2px 2px 0px var(--Themes-mainColor);
+  border: 2px solid var(--themes-mainColor, #000);
+  box-shadow: 2px 2px 0px var(--themes-mainColor);
+}
+
+.button {
+  position: relative;
+  background: var(--themes-background);
+  border: 2px solid var(--themes-mainColor);
+  cursor: pointer;
+  display: flex;
+  gap: 0.25em;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
-  content: '';
-  display: block;
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--Themes-background);
-  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
-}
-
-.button:focus::after{
-  outline: none;
-  border: none;
-}
-
-.button:focus-visible::after {
-  width: 100%;
-  opacity: 1;
-}
-
-.button:hover::after {
-  width: 100%;
-  background-color: var(--Themes-mainColor);
+  display: block;
+  background-color: var(--difference-color, #fff);
+  transition: inline-size 0.5s ease-in-out;
+  transform-origin: left center;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inline-size: 0%;
+  block-size: 100%;
+  mix-blend-mode: difference;
 }
 
 .button:hover {
-  color: var(--Themes-background);
-  fill: var(--Themes-background, #fff);
+  color: var(--difference-color, #fff);
   transition: color 1s ease;
+  cursor: pointer;
 }
 
-.button:hover .button__text{
-  fill: var(--Themes-background, #fff);
-  transition: color 1s ease;
+.button:hover::after {
+  inline-size: 100%;
 }
 
 .button__text {
-  font-family: "Press Start 2P", sans-serif;
+  font-family: var(--dop-font-family), fantasy;
+  color: var(--difference-color);
+  mix-blend-mode: difference;
   font-size: 14px;
   font-style: normal;
-  font-weight: var(--text-weight);
   line-height: 90%;
   position: relative;
   z-index: 1;
@@ -299,20 +300,19 @@
   cursor: pointer;
 }
 
-.card__icon-button:focus{
+.card__icon-button:focus {
   border: none;
   outline: none;
 }
 
-.footer {
+.save-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 54px;
 }
 
 .save {
-  margin: 50px auto 0;
-  color: var(--Themes-mainColor, #000);
+  margin: auto 0;
+  color: var(--themes-mainColor, #000);
   inline-size: fit-content;
 }
 
@@ -321,42 +321,41 @@
   align-items: center;
   position: relative;
   gap: 8px;
-  color: var(--Themes-mainColor, #000);
-  font-family: "Press Start 2P", sans-serif;
+  color: var(--themes-mainColor, #000);
+  font-family: var(--dop-font-family), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  border: 2px solid var(--Themes-mainColor, #000);
-  background: var(--Themes-background, #fff);
+  border: 2px solid var(--themes-mainColor, #000);
+  background: var(--themes-background, #fff);
   padding: 15px 20px;
 }
 
-.save__button:focus{
+.save__button:focus {
   border: none;
   outline: none;
 }
 
-.save__button:focus-visible{
-    border: 2px solid var(--Themes-mainColor, #000);
-  box-shadow: 2px 2px 0px 0px var(--Themes-mainColor);
+.save__button:focus-visible {
+  border: 2px solid var(--themes-mainColor, #000);
+  box-shadow: 2px 2px 0px 0px var(--themes-mainColor);
   transition: opacity 0.5s ease-in-out;
 }
-
 
 .button-image {
   inline-size: 21px;
   block-size: 21px;
-  fill: var(--Themes-mainColor);
+  fill: var(--themes-mainColor);
 }
 
 .dialog {
   position: fixed;
   inset: 0;
-  color: var(--Themes-mainColor);
-  border: 2px solid var(--Themes-mainColor, #000);
+  color: var(--themes-mainColor);
+  border: 2px solid var(--themes-mainColor, #000);
   padding: 30px;
-  background-color: var(--Themes-background, #fff);
+  background-color: var(--themes-background, #fff);
   transition: opacity 0.3s ease-in-out;
   inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
 }
@@ -376,75 +375,69 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Press Start 2P';
-  background-color: var(--Themes-background, #fff);
+  background-color: var(--themes-background, #fff);
+  font-family: var(--dop-font-family);
 }
 
 .content-form {
   display: flex;
-  justify-content: flex-end;
-  position: relative;
-  width: 100%;
-  margin-block-end: 30px;
+  align-items: center;
+  gap: 20px;
+  margin-block-end: 20px;
   font-size: 14px;
-font-weight: 400;
-line-height: 150%; /* 21px */
-text-transform: uppercase;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-transform: uppercase;
 }
 
 .form-icon {
-  fill: var(--Themes-mainColor);
-  inline-size: 39px;
-  block-size: 39px;
-  position: absolute;
-  z-index: 1;
+  fill: var(--themes-mainColor);
+  height: 80px;
   margin: 0;
-  left: 0px;
-  top: 10px;
 }
 
 .form-text {
-  color: var(--Themes-mainColor, #000);
-  font-family: 'Press Start 2P';
+  color: var(--themes-mainColor, #000);
+  font-family: var(--dop-font-family);
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  inline-size:  234px;
 }
 
 .dialog-button {
-  background-color: var(--Themes-background);
-  border: 2px solid var(--Themes-mainColor);
+  cursor: pointer;
+  border: 2px solid var(--themes-mainColor);
+  background-color: var(--themes-background);
   padding: 12.5px clamp(7.15625rem, 6.7601rem + 1.6901vw, 8.28125rem);
   inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
 }
 
 .dialog-button-text {
-  position: relative;
-  z-index: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  color: var(--Themes-mainColor);
-  font-family: 'Press Start 2P', fantasy;
+  color: var(--themes-mainColor);
+  font-family: var(--dop-font-family), fantasy;
   font-size: 14px;
   text-transform: uppercase;
 }
 
-
 @media (width <= 375px) {
+  .save-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .button__image {
     inline-size: 28px;
   }
 
-  .form-text{
+  .form-text {
     inline-size: 198px;
     padding-left: 0;
   }
 
-  .form-icon{
+  .form-icon {
     left: 9px;
   }
-
 }

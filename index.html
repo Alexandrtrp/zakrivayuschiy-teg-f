@@ -18,10 +18,10 @@
   </head>
 
   <body class="page">
-    <header class="header section-wbr">
-        <div class="title-wbr">
-          <h1 class="header-title">&lt;/HTML&gt;</h1>
-          <h2 class="header-title-dop">закрывающий тег</h2>
+    <header class="header section-wrapper">
+        <div class="title-wrapper">
+          <a class="header-title">&lt;/HTML&gt;</a>
+          <h1 class="header-title-dop">закрывающий тег</h1>
         </div>
         <nav class="theme-menu header__theme-menu">
           <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -50,18 +50,21 @@
         </nav>
     </header>
     <main class="main">
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+      <!-- У меня нет обретки для всех карточек проекта и для структуры
+      она, то бишь section на все не нужна, так как есть main  -->
+
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img" />
+          <img loading="lazy" src="./images/image.png" alt="Первая картинка" class="card-img" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -74,22 +77,22 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        </div>
+      </article>
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img filter-brightness" />
+          <img loading="lazy" src="./images/image.png" alt="Вторая картинка" class="card-img filter-brightness" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -102,22 +105,22 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        </div>
+      </article>
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text ">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img filter-contrast" />
+          <img loading="lazy" src="./images/image.png" alt="Третья картинка" class="card-img filter-contrast" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -130,22 +133,22 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        </div>
+      </article>
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text ">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img filter-blur" />
+          <img loading="lazy" src="./images/image.png" alt="Четвертая картинка" class="card-img filter-blur" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -158,22 +161,22 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        </div>
+      </article>
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text ">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img filter-opacity" />
+          <img loading="lazy" src="./images/image.png" alt="Пятая картинка" class="card-img filter-opacity" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -186,22 +189,22 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        </div>
+      </article>
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text ">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img filter-grayscale" />
+          <img loading="lazy" src="./images/image.png" alt="Шестая картинка" class="card-img filter-grayscale" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -214,22 +217,22 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        </div>
+      </article>
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img filter-saturate" />
+          <img loading="lazy" src="./images/image.png" alt="Седьмая картинка" class="card-img filter-saturate" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -242,22 +245,22 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-      <section class="card section-wbr">
-        <h3 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+        </div>
+      </article>
+      <article class="card section-wrapper">
+        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <figure class="card-img-wbr">
           <span class="card-img-text">&lt;/HTML&gt;</span>
-          <img loading="lazy" src="./images/image.png" alt="" class="card-img filter-hue-rotate" />
+          <img loading="lazy" src="./images/image.png" alt="Восьмая картинка" class="card-img filter-hue-rotate" />
         </figure>
-        <article class="card-description">
+        <div class="card-description">
           <p class="card-description-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card-description-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card-button-wbr">
-            <button class="card__icon-button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="card-button-wrapper">
+            <button type="button" class="card__icon-button">
+              <svg aria-hidden="true" class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
                   fill="var(--contour-color)"/>
@@ -270,34 +273,34 @@
                 fill="var(--core-color)"/>
               </svg>
             </button>
-            <button class="card__like-button button"><span class="button__text">Like</span></button>
+            <button type="button" class="card__like-button button"><span class="button__text">Like</span></button>
           </div>
-        </article>
-      </section>
-    </main>
-    <footer class="footer">
-      <aside class="save">
-        <button class="save-button button" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
-          <svg class="button-image" viewBox="0 0 21 21">
-            <use href="./svg/floppy.svg#floppy"></use>
-          </svg>
-          <span class="button__text">Сохранить на память</span>
-        </button>
-      </aside>
-      <dialog class="dialog" id="dialog-id">
-        <form class="dialog-form" method="dialog">
-          <div class="content-form">
-            <svg class="form-icon" viewBox="0 0 39 39">
+        </div>
+      </article>
+      <section class="save-wrapper">
+        <aside class="save">
+          <button class="save-button button" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
+            <svg class="button-image" viewBox="0 0 21 21">
               <use href="/svg/floppy.svg#floppy"></use>
             </svg>
-            <p class="form-text">Вставьте дискету, чтобы продолжить</p>
-          </div>
-          <button class="dialog-button" type="submit" onclick="window['dialog-id'.close()]">
-            <span class="dialog-button-text">ок</span>
+            <span class="button__text">Сохранить на память</span>
           </button>
-        </form>
-      </dialog>
-    </footer>
+        </aside>
+        <dialog class="dialog" id="dialog-id">
+          <form class="dialog-form" method="dialog">
+            <div class="content-form">
+              <svg class="form-icon" viewBox="0 0 39 39">
+                <use href="/svg/floppy.svg#floppy"></use>
+              </svg>
+              <p class="form-text">Вставьте дискету, чтобы продолжить</p>
+            </div>
+            <button class="dialog-button button" type="submit" onclick="window['dialog-id'.close()]">
+              <span class="dialog-button-text">ок</span>
+            </button>
+          </form>
+        </dialog>
+      </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
